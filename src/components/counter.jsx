@@ -32,6 +32,7 @@ export default class Counter extends Component {
         }
         return(
             <React.Fragment>
+                <h4>Counter #{this.props.id}</h4>
                 <span style={this.styles} className={classes}>{this.formatCount()}</span>
                 <button
                     className="btn btn-secondary btn-sm"
@@ -39,6 +40,7 @@ export default class Counter extends Component {
                 >
                     Increment
                 </button>
+                <button className="btn btn-danger btn-sm m-2">Delete</button>
                 {this.state.tags.length === 0 && 'Create a new tag'}
                 <ul>{this.renderTags()}</ul>
             </React.Fragment>
